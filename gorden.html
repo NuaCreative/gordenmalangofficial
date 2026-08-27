@@ -1,0 +1,137 @@
+<!-- SUB CATEGORY FILTER BUTTONS -->
+<div class="sub-tabs">
+    <button class="sub-btn active" onclick="filterSubCategory('all', event)">Semua</button>
+    <button class="sub-btn" onclick="filterSubCategory('basic', event)">Basic</button>
+    <button class="sub-btn" onclick="filterSubCategory('favorit', event)">Favorit</button>
+    <button class="sub-btn" onclick="filterSubCategory('premium', event)">Premium</button>
+</div>
+
+<!-- PRODUCT GRID UTAMA GORDEN -->
+<div class="product-grid">
+
+    <!-- 1. PEDRO SERIES (BASIC) -->
+    <div class="product-card"
+         data-sub="basic"
+         onclick="openProduct(this)"
+         data-images='[
+             "./foto/basic/coverpedro.png",
+             "./foto/basic/pedroA1.png",
+             "./foto/basic/pedroA2.png",
+             "./foto/basic/pedroB1.png",
+             "./foto/basic/pedroB2.png"
+         ]'
+         data-name="PEDRO Series"
+         data-category="Gorden Basic"
+         data-description="Semi Blackout Doff 85%"
+         data-price="Rp 95.000 / m²">
+
+        <img src="./foto/basic/coverpedro.png" alt="PEDRO Series">
+
+        <div class="product-info">
+            <span class="badge-cat">Gorden Basic</span>
+            <h3>PEDRO Series</h3>
+            <p class="spec">Semi Blackout Doff <strong>85%</strong></p>
+            <p class="price">Rp 95.000 / m²</p>
+            <a href="https://wa.me/6282211332228?text=Halo,%20saya%20tertarik%20dengan%20produk%20PEDRO%20Series%20(Basic)" 
+               target="_blank" 
+               class="btn-detail">
+               Pesan via WhatsApp
+            </a>
+        </div>
+    </div>
+
+
+    <!-- 2. TORONTO SERIES (BASIC) -->
+    <div class="product-card"
+         data-sub="basic"
+         onclick="openProduct(this)"
+         data-images='[
+             "./foto/basic/covertoronto.png",
+             "./foto/basic/torontoA1.png",
+             "./foto/basic/torontoA2.png",
+             "./foto/basic/torontoA3.png",
+             "./foto/basic/torontoB1.png",
+             "./foto/basic/torontoB2.png",
+             "./foto/basic/torontoB3.png"
+         ]'
+         data-name="TORONTO Series"
+         data-category="Gorden Basic"
+         data-description="Blackout Glossy 85%"
+         data-price="Rp 90.000 / m²">
+
+        <img src="./foto/basic/covertoronto.png" alt="TORONTO Series">
+
+        <div class="product-info">
+            <span class="badge-cat">Gorden Basic</span>
+            <h3>TORONTO Series</h3> 
+            <p class="spec">Blackout <strong>Glossy 85%</strong></p>
+            <p class="price">Rp 90.000 / m²</p>
+            <a href="https://wa.me/6282211332228?text=Halo,%20saya%20tertarik%20dengan%20produk%20TORONTO%20Series%20(Basic)" 
+               target="_blank" 
+               class="btn-detail">
+               Pesan via WhatsApp
+            </a>
+        </div>
+    </div>
+
+
+    <!-- 3. TEXTURE SOFT CANVAS (FAVORIT) -->
+    <div class="product-card"
+         data-sub="favorit"
+         onclick="openProduct(this)"
+         data-images='[
+             "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1200&q=90",
+             "https://images.unsplash.com/photo-1540518614846-7ede433c4ef0?auto=format&fit=crop&w=1200&q=90",
+             "https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?auto=format&fit=crop&w=1200&q=90"
+         ]'
+         data-name="Texture Soft Canvas"
+         data-category="Gorden Favorit"
+         data-description="Blackout 90 - 95%"
+         data-price="Rp 145.000 / m²">
+
+        <img src="foto/blind 1.png" alt="Texture Soft Canvas">
+
+        <div class="product-info">
+            <span class="badge-cat">Gorden Favorit</span>
+            <h3>Texture Soft Canvas</h3>
+            <p class="spec">Blackout: <strong>90 - 95%</strong></p>
+            <p class="price">Rp 145.000 / m²</p>
+            <a href="https://wa.me/6282211332228?text=Halo,%20saya%20tertarik%20dengan%20produk%20Texture%20Soft%20Canvas%20(Favorit)" 
+               target="_blank" 
+               class="btn-detail">
+               Pesan via WhatsApp
+            </a>
+        </div>
+    </div>
+
+
+    <!-- 4. ROYAL VELVET GOLD (PREMIUM) -->
+    <div class="product-card"
+         data-sub="premium"
+         onclick="openProduct(this)"
+         data-images='[
+             "https://images.unsplash.com/photo-1540518614846-7ede433c4ef0?auto=format&fit=crop&w=1200&q=90",
+             "https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?auto=format&fit=crop&w=1200&q=90",
+             "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1200&q=90"
+         ]'
+         data-name="Royal Velvet Gold"
+         data-category="Gorden Premium"
+         data-description="Blackout 100% (Total Block)"
+         data-price="Rp 250.000 / m²">
+
+        <img src="https://images.unsplash.com/photo-1540518614846-7ede433c4ef0?auto=format&fit=crop&w=500&q=80" alt="Royal Velvet Gold">
+
+        <div class="product-info">
+            <span class="badge-cat">Gorden Premium</span>
+            <h3>Royal Velvet Gold</h3>
+            <p class="spec">Blackout: <strong>100% (Total Block)</strong></p>
+            <p class="price">Rp 250.000 / m²</p>
+            <a href="https://wa.me/6282211332228?text=Halo,%20saya%20tertarik%20dengan%20produk%20Royal%20Velvet%20Gold%20(Premium)" 
+               target="_blank" 
+               class="btn-detail">
+               Pesan via WhatsApp
+            </a>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Katalog Produk - Gorden Malang</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
+    <header class="navbar">
+        <div class="logo">
+            GORDEN MALANG
+            <span class="sub-logo">
+                CV DEKORASI CREATIVE INTERIOR
+            </span>
+        </div>
+
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="katalog.html" class="active">Katalog Produk</a>
+            <a href="tentang.html">Tentang</a>
+        </nav>
+
+        <div class="nav-actions">
+            <a href="tentang.html" class="btn-primary-header">Profil Kami</a>
+        </div>
+    </header>
+
+
+    <!-- =====================================================
+         KATALOG (KERANGKA UTAMA)
+    ====================================================== -->
+    <section class="catalog-section">
+
+        <!-- HEADER -->
+        <div class="catalog-header">
+            <h2 class="section-title">Katalog Produk Eksklusif</h2>
+            <p>Pilih produk pilihan Anda dan konsultasikan langsung melalui WhatsApp.</p>
+        </div>
+
+        <!-- SEARCH -->
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Cari nama gorden atau spesifikasi..." onkeyup="filterProducts()">
+        </div>
+
+        <!-- KATEGORI UTAMA -->
+        <div class="category-tabs">
+            <button class="tab-btn active" onclick="switchCategory('gorden', event)">Gorden</button>
+            <button class="tab-btn" onclick="switchCategory('vitrase', event)">Vitrase</button>
+            <button class="tab-btn" onclick="switchCategory('blind', event)">Blind</button>
+            <button class="tab-btn" onclick="switchCategory('addons', event)">Add Ons</button>
+        </div>
+
+        <!-- TAB CONTENT CONTAINERS (TEMPAT JS MENYUNTIKKAN FILE) -->
+        <div id="gorden-content" class="category-content active"></div>
+        <div id="vitrase-content" class="category-content"></div>
+        <div id="blind-content" class="category-content"></div>
+        <div id="addons-content" class="category-content"></div>
+
+    </section>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+    <footer class="footer">
+        <div class="footer-content">
+            <h3>Gorden Malang Official</h3>
+            <p>Melayani pengukuran, pembuatan dan pemasangan gorden langsung ke rumah Anda di Malang dan sekitarnya.</p>
+
+            <div class="footer-contact-info">
+                <div class="footer-address">
+                    📍 Jl. S Supriadi Gg. IX<br>
+                    Pendidikan No 21, Malang
+                </div>
+
+                <div class="footer-divider"></div>
+
+                <div class="footer-whatsapp">
+                    📞 WhatsApp:<br>
+                    0822-1133-2228
+                </div>
+            </div>
+
+            <p class="copyright">&copy; 2026 Gorden Malang. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+
+    <!-- =====================================================
+         PRODUCT DETAIL MODAL
+    ====================================================== -->
+    <div class="product-modal" id="productModal">
+        <div class="product-modal-overlay" onclick="closeProduct()"></div>
+
+        <div class="product-modal-content">
+            <button class="modal-close" onclick="closeProduct()">×</button>
+
+            <!-- FOTO BESAR MODAL -->
+            <div class="product-gallery">
+                <button class="gallery-btn gallery-prev" onclick="changeProductImage(-1)">‹</button>
+                <img id="modalMainImage" src="" alt="Product">
+                <button class="gallery-btn gallery-next" onclick="changeProductImage(1)">›</button>
+
+                <div class="image-counter" id="imageCounter">1 / 1</div>
+            </div>
+
+            <!-- THUMBNAILS -->
+            <div class="product-thumbnails" id="productThumbnails"></div>
+
+            <!-- INFORMASI PRODUK -->
+            <div class="product-modal-info">
+                <span class="modal-category" id="modalCategory"></span>
+                <h2 id="modalName"></h2>
+                <p id="modalDescription"></p>
+                <div class="modal-price" id="modalPrice"></div>
+
+                <a id="modalWhatsapp" href="#" target="_blank" class="modal-whatsapp">
+                    Pesan via WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- =====================================================
+         FULLSCREEN LIGHTBOX ZOOM MODAL
+    ====================================================== -->
+    <div id="lightboxModal" class="lightbox-modal" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightboxImg" src="" alt="Zoom Photo" onclick="event.stopPropagation()">
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

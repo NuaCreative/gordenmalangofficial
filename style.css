@@ -1,0 +1,1131 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* =========================================================
+   1. RESET & GLOBAL STYLING (BERLAKU DI SEMUA HALAMAN)
+========================================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #FAFAFA;
+    color: #2C2C2C;
+    line-height: 1.6;
+}
+
+h1, h2, h3, .logo {
+    font-family: 'Playfair Display', serif;
+}
+
+
+/* =========================================================
+   2. NAVBAR & HEADER (BERLAKU DI SEMUA HALAMAN)
+========================================================= */
+.navbar {
+    position: fixed;
+    top: 40px;
+    left: 5%;
+    right: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: #FFFFFF;
+    border-radius: 50px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #4A3525;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+}
+
+.logo .sub-logo {
+    font-size: 0.55rem;
+    font-weight: 500;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #777777;
+    letter-spacing: 0.5px;
+    margin-top: 2px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #555555;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover, 
+.nav-links a.active {
+    color: #C5A059;
+}
+
+.btn-primary-header {
+    background-color: #C5A059;
+    color: #FFFFFF;
+    padding: 8px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.85rem;
+    transition: background 0.3s;
+}
+
+.btn-primary-header:hover {
+    background-color: #A98441;
+}
+
+
+/* =========================================================
+   3. HALAMAN HOME (HERO & SLIDER SECTION)
+========================================================= */
+
+/* HERO SECTION HOME */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('foto/gorden 1.png') center / 100% auto no-repeat fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 240px 20px 0px 10px;
+    box-sizing: border-box;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    margin-bottom: 50px;
+    color: #EFEFEF;
+}
+
+.btn-hero {
+    display: inline-block;
+    background-color: #C5A059;
+    color: #FFFFFF;
+    padding: 12px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.btn-hero:hover {
+    background-color: #A98441;
+}
+
+/* SLIDER SECTION HOME */
+.slider-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('foto/gorden 1.png') center / 100% auto no-repeat fixed;
+    padding: 100px 20px 120px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider-title {
+    color: #FFFFFF;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    font-family: 'Playfair Display', serif;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.slider-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+.slider-track {
+    display: flex;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    gap: 20px;
+    align-items: center;
+}
+
+.slide-card {
+    min-width: calc(33.333% - 14px);
+    background: rgba(35, 30, 26, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 20px;
+    padding: 18px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    color: #FFFFFF;
+    box-sizing: border-box;
+    opacity: 0.4;
+    transform: scale(0.9);
+    transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.slide-card.active {
+    opacity: 1;
+    transform: scale(1.05);
+    border: 1px solid rgba(197, 160, 89, 0.7);
+}
+
+.slide-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.slide-info h3 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    font-family: 'Playfair Display', serif;
+    color: #FFFFFF;
+    letter-spacing: 0.5px;
+}
+
+.slide-info p {
+    font-size: 0.8rem;
+    color: #D1C7BD;
+}
+
+.slider-dots {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    background-color: #C5A059;
+    width: 22px;
+    border-radius: 4px;
+}
+
+
+/* =========================================================
+   4. HALAMAN KATALOG PRODUK
+========================================================= */
+
+/* KATALOG SECTION HEADER */
+.catalog-section {
+    padding: 140px 8% 80px 8%;
+    background-color: #FAFAFA;
+}
+
+.catalog-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.catalog-header .section-title {
+    font-size: 2.2rem;
+    color: #2C2C2C;
+    margin-bottom: 1px;
+}
+
+.catalog-header p {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 40px;
+}
+
+/* SEARCH BAR */
+.search-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+#searchInput {
+    width: 100%;
+    max-width: 450px;
+    padding: 12px 20px;
+    border: 1px solid #E0D0C0;
+    border-radius: 30px;
+    font-size: 0.95rem;
+    outline: none;
+    background-color: #FFFFFF;
+    color: #333333;
+    transition: all 0.3s;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+}
+
+#searchInput:focus {
+    border-color: #C5A059;
+    box-shadow: 0 4px 15px rgba(197, 160, 89, 0.15);
+}
+
+/* TAB UTAMA & SUB TABS FILTER */
+.category-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.tab-btn {
+    background-color: #FFFFFF;
+    border: 1px solid #E0D0C0;
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #4A3525;
+    transition: all 0.3s;
+}
+
+.tab-btn.active, 
+.tab-btn:hover {
+    background-color: #C5A059;
+    color: #FFFFFF;
+    border-color: #C5A059;
+}
+
+.sub-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 35px;
+}
+
+.sub-btn {
+    background-color: transparent;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    color: #666;
+    transition: all 0.3s;
+}
+
+.sub-btn.active, 
+.sub-btn:hover {
+    background-color: #EFE6D8;
+    color: #4A3525;
+}
+
+.category-content, 
+.sub-content {
+    display: none;
+}
+
+.category-content.active, 
+.sub-content.active {
+    display: block;
+}
+
+/* PRODUCT GRID & CARDS KATALOG */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.product-card {
+    background: #FFFFFF;
+    border-radius: 12px;
+    overflow: hidden;
+    width: 100%;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+    border: 1px solid #F0E6DC;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    position: relative;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.product-card img,
+.product-card .product-info {
+    pointer-events: none;
+}
+
+.product-card img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    display: block;
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.badge-cat {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    background-color: #F4EAD5;
+    color: #8C6D46;
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+.product-info h3 {
+    font-size: 1.15rem;
+    color: #333;
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+.product-info .spec {
+    font-size: 0.85rem;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.product-info .price {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #C5A059;
+    margin-bottom: 15px;
+}
+
+.btn-detail {
+    display: block;
+    text-align: center;
+    background-color: #2D241E;
+    color: #FFFFFF;
+    padding: 10px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: background 0.3s;
+    pointer-events: auto;
+    position: relative;
+    z-index: 2;
+}
+
+.btn-detail:hover {
+    background-color: #C5A059;
+}
+
+
+/* =========================================================
+   5. HALAMAN TENTANG KAMI (DESAIN MODERN & LAYOUT VERTIKAL)
+========================================================= */
+
+/* KANVAS UTAMA FULL LAYAR GRADIENT GOLD */
+body {
+    background: linear-gradient(to top, #EFE6D8 0%, #FAF6EE 40%, #FAFAFA 100%) !important;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+.about-page-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 140px 20px 80px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: transparent !important;
+    border-radius: 0 !important;
+}
+
+.about-hero-block,
+.reels-block,
+.about-hero-section,
+.reels-section {
+    background: transparent !important;
+}
+
+/* 1. HERO BANNER FOTO DENGAN ROUNDED CORNERS */
+.about-hero-banner {
+    width: 100%;
+    height: 420px;
+    border-radius: 30px;
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), 
+                url('foto/workshop2.png') center/cover no-repeat;
+    display: flex;
+    align-items: flex-end;
+    padding: 50px 60px;
+    margin-bottom: 50px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.hero-banner-content {
+    max-width: 580px;
+    color: #FFFFFF;
+    text-align: left;
+}
+
+.btn-hero-banner {
+    display: inline-block;
+    background-color: #FFFFFF;
+    color: #2C2C2C;
+    padding: 12px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.btn-hero-banner:hover {
+    background-color: #C5A059;
+    color: #FFFFFF;
+}
+
+/* 2. INTRO BRAND DESKRIPSI RATA KIRI */
+.about-intro-section {
+    width: 100%;
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.about-brand-logo {
+    display: block;
+    margin-bottom: 15px;
+    margin-left: 0;
+}
+
+.about-brand-logo img {
+    height: 90px;
+    width: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.about-intro-text p {
+    max-width: 780px;
+    color: #555555;
+    font-size: 0.98rem;
+    line-height: 1.7;
+    text-align: left;
+    margin: 0;
+}
+
+/* 3. PROJECT KAMI (TATA LETAK VERTIKAL: TEKS ATAS, REELS BAWAH) */
+.reels-block {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+/* TEKS JUDUL & DESKRIPSI DI ATAS */
+.reels-header {
+    max-width: 650px;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.reels-header h2 {
+    font-size: 2.5rem;
+    color: #2C2C2C;
+    margin-bottom: 10px;
+    font-family: 'Playfair Display', serif;
+}
+
+.reels-header p {
+    color: #666666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* SLIDER REELS KARTU DI BAWAH */
+.reels-slider-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 60px; /* Ruang khusus tombol navigasi panah */
+}
+
+.reels-track {
+    display: flex;
+    gap: 24px;
+    transition: transform 0.4s ease-in-out;
+}
+
+/* KARTU REELS MINIMALIS MELENGKUNG HALUS */
+.clean-card {
+    flex: 0 0 250px;
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+}
+
+.clean-media-container {
+    width: 100%;
+    height: 250px; /* Dikurangi dari 380px ke 310px agar footer IG terpotong habis */
+    border-radius: 24px;
+    overflow: hidden;
+    position: relative;
+    background: #000000;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.clean-media-container iframe {
+    width: 100%;
+    height: 580px !important;
+    border: none;
+    display: block;
+    /* Geser iframe lebih ke atas agar header & footer IG terdorong keluar frame */
+    margin-top: -120px !important; 
+    pointer-events: auto;
+}
+/* TOMBOL FULLSCREEN MELAYANG */
+.btn-open-fullscreen {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #FFFFFF;
+    border: none;
+    padding: 7px 14px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    cursor: pointer;
+    z-index: 20;
+    backdrop-filter: blur(4px);
+    transition: all 0.3s ease;
+}
+
+.btn-open-fullscreen:hover {
+    background: #C5A059;
+    color: #FFFFFF;
+    transform: scale(1.05);
+}
+
+.clean-card-info {
+    padding-top: 15px;
+    text-align: left;
+}
+
+.clean-card-info h4 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #2C2C2C;
+    margin-bottom: 4px;
+}
+
+.clean-card-info p {
+    font-size: 0.85rem;
+    color: #888888;
+}
+
+/* TOMBOL NAVIGASI POJOK KANAN BAWAH */
+.slider-nav-bottom {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    gap: 12px;
+}
+
+.slider-nav-bottom .nav-btn {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 1px solid #D1C7BD;
+    background: #FFFFFF;
+    color: #2C2C2C;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.slider-nav-bottom .nav-btn.next-btn {
+    background: #2C2C2C; /* Tombol hitam elegan */
+    color: #FFFFFF;
+    border-color: #2C2C2C;
+}
+
+.slider-nav-bottom .nav-btn:hover {
+    transform: scale(1.08);
+}
+
+/* MODAL POPUP IG FULLSCREEN */
+.ig-modal {
+    display: none;
+    position: fixed;
+    z-index: 99999;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.88);
+    backdrop-filter: blur(10px);
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.ig-modal.active {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-content-ig {
+    position: relative;
+    width: 400px;
+    max-width: 90%;
+    height: 700px;
+    max-height: 90vh;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #000000;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+.modal-content-ig iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #FFFFFF;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 100000;
+}
+
+
+/* =========================================================
+   6. FOOTER (BERLAKU DI SEMUA HALAMAN)
+========================================================= */
+.footer {
+    background-color: #1F1814;
+    color: #D1C7BD;
+    text-align: center;
+    padding: 30px 8%;
+}
+
+.footer-content h3 {
+    color: #F4EAD5;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.footer-content p {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.footer-contact-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin: 20px auto 15px auto;
+    font-size: 0.9rem;
+    color: #D1C7BD;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.footer-address {
+    max-width: 250px;
+}
+
+.footer-whatsapp {
+    max-width: 180px;
+}
+
+.footer-divider {
+    width: 1px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.copyright {
+    font-size: 0.8rem;
+    color: #888888;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding-top: 20px;
+}
+
+
+/* =========================================================
+   7. MODAL DETAIL PRODUK & LIGHTBOX FULLSCREEN
+========================================================= */
+
+.product-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-modal.active {
+    display: flex;
+}
+
+.product-modal-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+
+.product-modal-content {
+    position: relative;
+    z-index: 2;
+    width: min(500px, 92vw);
+    max-height: 90vh;
+    background: #FFFFFF;
+    border-radius: 20px;
+    overflow-y: auto;
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.35);
+    animation: productModalShow 0.25s ease;
+}
+
+@keyframes productModalShow {
+    from {
+        opacity: 0;
+        transform: scale(0.94) translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 20;
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.65);
+    color: #FFFFFF;
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.25s ease;
+}
+
+.modal-close:hover {
+    background: #2D241E;
+    transform: rotate(90deg);
+}
+
+.product-gallery {
+    position: relative;
+    width: 100%;
+    height: 480px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #F5F3EF;
+    overflow: hidden;
+}
+
+.product-gallery > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+    object-position: center;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.gallery-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.94);
+    color: #2D241E;
+    font-size: 30px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    transition: all 0.25s ease;
+}
+
+.gallery-btn:hover {
+    background: #C5A059;
+    color: #FFFFFF;
+    transform: translateY(-50%) scale(1.08);
+}
+
+.gallery-prev { left: 15px; }
+.gallery-next { right: 15px; }
+
+.image-counter {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    z-index: 10;
+    padding: 6px 12px;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.65);
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.product-thumbnails {
+    display: flex;
+    gap: 10px;
+    padding: 15px 20px;
+    overflow-x: auto;
+    background: #FFFFFF;
+    border-bottom: 1px solid #EEEEEE;
+    scrollbar-width: thin;
+}
+
+.product-thumbnail {
+    flex: 0 0 65px;
+    width: 65px;
+    height: 65px;
+    overflow: hidden;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.product-thumbnail:hover {
+    transform: translateY(-2px);
+}
+
+.product-thumbnail.active {
+    border-color: #C5A059;
+}
+
+.product-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.product-modal-info {
+    padding: 25px 30px 30px;
+}
+
+.modal-category {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 5px;
+    background: #F4EAD5;
+    color: #8C6D46;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.product-modal-info h2 {
+    margin: 12px 0 8px;
+    font-family: 'Playfair Display', serif;
+    color: #333333;
+    font-size: 26px;
+    line-height: 1.3;
+}
+
+.product-modal-info p {
+    margin-bottom: 10px;
+    color: #777777;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.modal-price {
+    margin-bottom: 20px;
+    color: #C5A059;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.modal-whatsapp {
+    display: block;
+    width: 100%;
+    padding: 14px 20px;
+    border-radius: 8px;
+    background: #2D241E;
+    color: #FFFFFF;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.modal-whatsapp:hover {
+    background: #C5A059;
+    color: #FFFFFF;
+    transform: translateY(-2px);
+}
+
+.lightbox-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 999999;
+    background: rgba(0, 0, 0, 0.9);
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    cursor: zoom-out;
+}
+
+.lightbox-modal.active {
+    display: flex;
+}
+
+.lightbox-modal img {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 8px;
+    cursor: zoom-in;
+    transition: transform 0.2s ease-out;
+    user-select: none;
+}
+
+.lightbox-modal img.zoomed {
+    transform: scale(2);
+    cursor: grab;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    color: #FFFFFF;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10;
+}
+
+
+/* =========================================================
+   8. RESPONSIF / MEDIA QUERIES
+========================================================= */
+
+@media (max-width: 968px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .about-page-container {
+        padding: 110px 15px 50px 15px;
+    }
+    .about-hero-banner {
+        height: auto;
+        padding: 40px 25px;
+        border-radius: 20px;
+    }
+}
+
+@media (max-width: 650px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+    .nav-links {
+        display: none;
+    }
+    .product-modal-content {
+        width: 94vw;
+        max-height: 90vh;
+        border-radius: 16px;
+    }
+    .product-gallery {
+        max-height: 420px;
+    }
+    .gallery-btn {
+        width: 38px;
+        height: 38px;
+        font-size: 26px;
+    }
+    .gallery-prev { left: 10px; }
+    .gallery-next { right: 10px; }
+    .image-counter { right: 12px; bottom: 12px; font-size: 12px; }
+    .product-thumbnails { padding: 12px 15px; }
+    .product-thumbnail { flex-basis: 55px; width: 55px; height: 55px; }
+    .product-modal-info { padding: 20px; }
+    .product-modal-info h2 { font-size: 22px; }
+    .modal-price { font-size: 18px; }
+}
+
+@media (max-width: 400px) {
+    .product-gallery {
+        max-height: 340px;
+    }
+    .modal-close {
+        width: 36px;
+        height: 36px;
+        font-size: 24px;
+    }
+}

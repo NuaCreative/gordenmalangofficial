@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami - Gorden Malang</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- NAVBAR MELAYANG -->
+    <header class="navbar">
+        <div class="logo">
+            GORDEN MALANG
+            <span class="sub-logo">CV DEKORASI CREATIVE INTERIOR</span>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="katalog.html">Katalog Produk</a>
+            <a href="tentang.html" class="active">Tentang</a>
+        </nav>
+        <div class="nav-actions">
+            <a href="katalog.html" class="btn-primary-header">Lihat Katalog</a>
+        </div>
+    </header>
+    
+    <!-- MAIN CONTAINER TENTANG KAMI -->
+        <main class="about-page-container">
+
+    <!-- 1. HERO BANNER FULL LEBAR LAYAR (DI LUAR MAIN CONTAINER) -->
+    <section class="about-hero-banner">
+        <div class="hero-banner-content">
+            <a href="#reels-section" class="btn-hero-banner">Project Kami</a>
+        </div>
+    </section>
+
+
+    <!-- MAIN CONTAINER TENTANG KAMI -->
+    <main class="about-page-container">
+
+        <!-- 2. DESKRIPSI BRAND & STATISTIK -->
+        <section class="about-intro-section">
+            <div class="about-intro-text">
+                <div class="about-brand-logo">
+                    <img src="foto/logo gorden(hitam).png" alt="Logo Gorden Malang">
+                </div>
+                <p>
+                    Gorden Malang Official merupakan Vendor penyedia solusi dekorasi jendela premium yang berfokus pada kualitas, estetika, dan detail. Kami menghadirkan produk gorden custom dengan sentuhan desain elegan yang dirancang untuk menyempurnakan setiap ruang, baik hunian pribadi maupun area komersial.
+                </p>
+            </div>
+        </section>
+
+        <!-- 3. PROJECT KAMI (TATA LETAK VERTIKAL: TEKS DI ATAS, SLIDER DI BAWAH) -->
+        <section id="reels-section" class="reels-block">
+            
+            <!-- HEADER TEKS DI ATAS -->
+            <div class="reels-header">
+                <h2>Project Kami</h2>
+                <p>Lihat hasil pemasangan gorden nyata dan video transformasi ruangan langsung dari proyek kami.</p>
+            </div>
+
+            <!-- SLIDER KARTU DI BAWAH -->
+            <div class="reels-slider-wrapper">
+                <div class="reels-track" id="reelsTrack">
+                    
+                    <!-- CARD 1 -->
+                    <div class="clean-card">
+                        <div class="clean-media-container">
+                            <iframe src="https://www.instagram.com/reel/Db5Lp5Gx116/embed" 
+                                    frameborder="0" 
+                                    scrolling="no" 
+                                    allowtransparency="true" 
+                                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+                            </iframe>
+                            <button class="btn-open-fullscreen" onclick="openIgModal('https://www.instagram.com/reel/Db5Lp5Gx116/')">
+                                ⛶ Fullscreen
+                            </button>
+                        </div>
+                        <div class="clean-card-info">
+                            <h4>Cafe Pane e' Pane</h4>
+                            <p>Instalasi Vitrase</p>
+                        </div>
+                    </div>
+
+                    <!-- CARD 2-->
+                    <div class="clean-card">
+                        <div class="clean-media-container">
+                            <iframe src="https://www.instagram.com/reel/DVdI88kkWW_/embed"
+                                    frameborder="0" 
+                                    scrolling="no" 
+                                    allowtransparency="true" 
+                                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+                            </iframe>
+                            <button class="btn-open-fullscreen" onclick="openIgModal('https://www.instagram.com/reel/DVdI88kkWW_/')">
+                                ⛶ Fullscreen
+                            </button>
+                        </div>
+                        <div class="clean-card-info">
+                            <h4>William Lomban</h4>
+                            <p>ProjectKota Blitar</p>
+                        </div>
+                    </div>
+
+                    <!-- CARD 3-->
+                    <div class="clean-card">
+                        <div class="clean-media-container">
+                            <iframe src="https://www.instagram.com/reel/DaUk-cGKnej/?/embed"
+                                    frameborder="0" 
+                                    scrolling="no" 
+                                    allowtransparency="true" 
+                                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+                            </iframe>
+                            <button class="btn-open-fullscreen" onclick="openIgModal('https://www.instagram.com/reel/DaUk-cGKnej/?/')">'
+                                ⛶ Fullscreen
+                            </button>
+                        </div>
+                        <div class="clean-card-info">
+                            <h4>William Lomban</h4>
+                            <p>ProjectKota Blitar</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- TOMBOL NAVIGASI POJOK KANAN BAWAH -->
+                <div class="slider-nav-bottom">
+                    <button class="nav-btn prev-btn" onclick="slideReels(-1)">‹</button>
+                    <button class="nav-btn next-btn" onclick="slideReels(1)">›</button>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- MODAL POPUP IG FULLSCREEN -->
+    <div id="igModal" class="ig-modal" onclick="closeIgModal()">
+        <span class="close-modal">&times;</span>
+        <div class="modal-content-ig" onclick="event.stopPropagation()">
+            <iframe id="modalIgIframe" src="" frameborder="0" scrolling="no" allowtransparency="true" allow="encrypted-media"></iframe>
+        </div>
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <h3>Gorden Malang Official</h3>
+            <p>Melayani pengukuran, pembuatan dan pemasangan gorden langsung ke rumah Anda di Malang dan sekitarnya.</p>
+
+            <div class="footer-contact-info">
+                <div class="footer-address">
+                    📍 Jl. S Supriadi Gg. IX <br> Pendidikan No 21, Malang
+                </div>
+                <div class="footer-divider"></div>
+                <div class="footer-whatsapp">
+                    📞 WhatsApp: <br> 0822-1133-2228
+                </div>
+            </div>
+
+            <p class="copyright">&copy; 2026 Gorden Malang. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
