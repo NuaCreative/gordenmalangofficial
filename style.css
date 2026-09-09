@@ -191,28 +191,19 @@ img {
 
 .hero-section {
     position: relative;
-
     min-height: 100vh;
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
     text-align: center;
-
     color: #FFFFFF;
-
     padding: 150px 20px 100px;
-
     background:
+        linear-gradient(rgba(0, 0, 0, 0.10), rgba(0, 0, 0, 0.10)),
         url('foto/gorden 1.png')
         center center / cover no-repeat;
-
     overflow: hidden;
 }
-
 
 /* HERO OVERLAY */
 
@@ -1952,40 +1943,26 @@ img {
     }
 
 
-    /* =====================================================
+/* =====================================================
        HERO MOBILE
     ===================================================== */
-
     .hero-section {
-
-        min-height:
-            100svh;
-
-        height:
-            100svh;
-
-        padding:
-            100px 20px
-            50px;
-
-        display:
-            flex;
-
-        align-items:
-            center;
-
-        justify-content:
-            center;
-
+        min-height: 100svh;
+        height: 100svh;
+        padding: 100px 20px 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        /* Tambahkan linear-gradient di sini juga */
         background:
+            linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
             url('foto/gorden 1.png')
             center center / cover
             no-repeat;
-
-        margin:
-            0;
+            
+        margin: 0;
     }
-
 
     .hero-overlay {
 
