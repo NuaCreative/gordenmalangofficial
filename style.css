@@ -2868,11 +2868,5 @@ img {
         height:
             320px;
     }
-
-    @media (max-width: 650px) {
-    .hero-content {
-        transform: translateY(35px);
-    }
-
-
+    
 }
