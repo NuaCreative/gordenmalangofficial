@@ -1,103 +1,299 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Gorden Malang - Elegan & Mewah</title>
+
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
 
-    <!-- NAVBAR MELAYANG -->
+    <!-- =====================================================
+         NAVBAR MELAYANG
+    ====================================================== -->
+
     <header class="navbar">
+
         <div class="logo">
-    GORDEN MALANG 
-    <span class="sub-logo">CV DEKORASI CREATIVE INTERIOR</span>
+            GORDEN MALANG
+            <span class="sub-logo">
+                CV DEKORASI CREATIVE INTERIOR
+            </span>
         </div>
+
         <nav class="nav-links">
-            <a href="index.html" class="active">Home</a>
-            <a href="katalog.html">Katalog Produk</a>
-            <a href="tentang.html">Tentang</a>
+
+            <a href="index.html" class="active">
+                Home
+            </a>
+
+            <a href="katalog.html">
+                Katalog Produk
+            </a>
+
+            <a href="tentang.html">
+                Tentang
+            </a>
+
         </nav>
+
         <div class="nav-actions">
-            <a href="katalog.html" class="btn-primary-header">Lihat Katalog</a>
+
+            <a href="katalog.html" class="btn-primary-header">
+                Lihat Katalog
+            </a>
+
         </div>
+
     </header>
 
-    <!-- HERO SECTION / TAMPILAN UTAMA -->
-    <section class="hero-section">
-        <div class="hero-content">
-            <h1>BELI GORDEN LANGSUNG DI PABRIKNYA!</h1>
-            <p>Pusat Gorden, Blind dan Perlengkapannya dengan bahan premium & desain eksklusif serta pengukuran langsung ke rumah Anda.</p>
-            <a href="katalog.html" class="btn-hero">Jelajahi Katalog Lengkap</a>
-        </div>
-    </section>
 
-    
-    <!-- SECTION SLIDER PRODUK UNGGULAN -->
-    <section class="slider-section">
-        <h2 class="slider-title">Signature Collection</h2>
-        
-        <div class="slider-container">
-            <div class="slider-track" id="sliderTrack">
-                <!-- Slide 1 -->
-                <div class="slide-card">
-                    <img src="foto/blinds/blind 11.png" alt="Venetian Blind">
-                    <div class="slide-info">
-                        <h3>VENETIAN BLIND</h3>
-                        <p>Minimalist &nbsp;|&nbsp; Premium Quality</p>
-                    </div>
-                </div>
-                <!-- Slide 2 -->
-                <div class="slide-card active">
-                    <img src="foto/gorden 2.png" alt="Gorden Blackout">
-                    <div class="slide-info">
-                        <h3>GORDEN BLACKOUT</h3>
-                        <p>100% Block Light  &nbsp;|&nbsp; Best Choice</p>
-                    </div>
-                </div>
-                <!-- Slide 3 -->
-                <div class="slide-card">
-                    <img src="foto/vitrase 1.png" alt="Vitrase Elegan">
-                    <div class="slide-info">
-                        <h3>VITRASE</h3>
-                        <p>Light Control &nbsp;|&nbsp; Natural </p>
-                    </div>
-                </div>
+    <!-- =====================================================
+         HOME BACKGROUND
+         HERO + SIGNATURE MENJADI SATU BACKGROUND
+    ====================================================== -->
+
+    <main class="home-background">
+
+
+        <!-- =================================================
+             HERO SECTION
+        ================================================== -->
+
+        <section class="hero-section">
+
+            <div class="hero-content">
+
+                <h1>
+                    BELI GORDEN
+                    LANGSUNG DI
+                    PABRIKNYA!
+                </h1>
+
+                <p>
+                    Pusat Gorden, Blind dan Perlengkapannya
+                    dengan bahan premium & desain eksklusif
+                    serta pengukuran langsung ke rumah Anda.
+                </p>
+
+                <a href="katalog.html" class="btn-hero">
+                    Jelajahi Katalog Lengkap
+                </a>
+
             </div>
-        </div>
 
-        <!-- Titik Indikator (Dots) -->
-        <div class="slider-dots">
-            <span class="dot" onclick="currentSlide(0)"></span>
-            <span class="dot active" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-        </div>
-    </section>
+        </section>
 
-<!-- FOOTER -->
+
+
+        <!-- =================================================
+             SIGNATURE COLLECTION
+        ================================================== -->
+
+        <section class="slider-section">
+
+            <h2 class="slider-title">
+                Signature Collection
+            </h2>
+
+
+            <div class="slider-container">
+
+                <div class="slider-track" id="sliderTrack">
+
+
+                    <!-- ===============================
+                         SLIDE 1
+                    ================================ -->
+
+                    <div class="slide-card">
+
+                        <img
+                            src="foto/blinds/blind 11.png"
+                            alt="Venetian Blind"
+                        >
+
+                        <div class="slide-info">
+
+                            <h3>
+                                VENETIAN BLIND
+                            </h3>
+
+                            <p>
+                                Minimalist
+                                &nbsp;|&nbsp;
+                                Premium Quality
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ===============================
+                         SLIDE 2
+                    ================================ -->
+
+                    <div class="slide-card active">
+
+                        <img
+                            src="foto/gorden 2.png"
+                            alt="Gorden Blackout"
+                        >
+
+                        <div class="slide-info">
+
+                            <h3>
+                                GORDEN BLACKOUT
+                            </h3>
+
+                            <p>
+                                100% Block Light
+                                &nbsp;|&nbsp;
+                                Best Choice
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ===============================
+                         SLIDE 3
+                    ================================ -->
+
+                    <div class="slide-card">
+
+                        <img
+                            src="foto/vitrase 1.png"
+                            alt="Vitrase Elegan"
+                        >
+
+                        <div class="slide-info">
+
+                            <h3>
+                                VITRASE
+                            </h3>
+
+                            <p>
+                                Light Control
+                                &nbsp;|&nbsp;
+                                Natural
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 SLIDER DOTS
+            ================================================== -->
+
+            <div class="slider-dots">
+
+                <span
+                    class="dot"
+                    onclick="currentSlide(0)">
+                </span>
+
+                <span
+                    class="dot active"
+                    onclick="currentSlide(1)">
+                </span>
+
+                <span
+                    class="dot"
+                    onclick="currentSlide(2)">
+                </span>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
     <footer class="footer">
+
         <div class="footer-content">
-            <h3>Gorden Malang Official</h3>
-            <p>Melayani pengukuran, pembuatan dan pemasangan gorden langsung ke rumah Anda di Malang dan sekitarnya.</p>
-            
-            <!-- BAGIAN ALAMAT & WA BERBAMPINGAN -->
+
+            <h3>
+                Gorden Malang Official
+            </h3>
+
+            <p>
+                Melayani pengukuran, pembuatan dan pemasangan
+                gorden langsung ke rumah Anda di Malang dan sekitarnya.
+            </p>
+
+
+            <!-- ALAMAT & WHATSAPP -->
+
             <div class="footer-contact-info">
+
                 <div class="footer-address">
-                    📍 Jl. S Supriadi Gg. IX <br> Pendidikan No 21, Malang
+
+                    📍 Jl. S Supriadi Gg. IX
+                    <br>
+                    Pendidikan No 21, Malang
+
                 </div>
+
+
                 <div class="footer-divider"></div>
+
+
                 <div class="footer-whatsapp">
-                    📞 WhatsApp: <br> 0822-1133-2228
+
+                    📞 WhatsApp:
+                    <br>
+                    0822-1133-2228
+
                 </div>
+
             </div>
 
-            <p class="copyright">&copy; 2026 Gorden Malang. All Rights Reserved.</p>
+
+            <p class="copyright">
+
+                &copy; 2026 Gorden Malang.
+                All Rights Reserved.
+
+            </p>
+
         </div>
+
     </footer>
 
-<!-- Pastikan tag script ini ada di bagian paling bawah file home.html -->
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
     <script src="script.js"></script>
+
 </body>
+
 </html>
